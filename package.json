@@ -2,12 +2,13 @@
   "name": "test-inventory",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test"
-  },
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test",
+  "postinstall": "npm install -g @angular/cli"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "^14.0.0",
