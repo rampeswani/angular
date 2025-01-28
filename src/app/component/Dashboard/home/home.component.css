@@ -1,0 +1,53 @@
+/* Ensure the radio buttons are displayed in a row */
+.mat-radio-group {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-bottom: 15px; /* Adjust the margin for better spacing */
+  }
+  
+  /* Styling for each radio button */
+  .mat-radio-button {
+    margin: 5px 0; /* Add space between the buttons */
+    font-size: 14px; /* Adjust the font size */
+    display: flex;
+    align-items: center;
+  }
+  
+  /* Adding label styling */
+  label {
+    font-size: 16px;
+    font-weight: 500;
+    margin-bottom: 8px;
+  }
+  
+  /* Style for the required asterisk */
+  .text-danger {
+    color: red;
+    margin-left: 5px;
+  }
+  
+  /* Optional: Adjust the margin on col-md-6 to center the content */
+  .col-md-6 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+  }
+  
+  /* Add hover effect on radio buttons */
+.mat-radio-button:hover {
+    background-color: #f1f1f1;
+    cursor: pointer;
+  }
+  
+  /* Add focus effect */
+  .mat-radio-button:focus-within {
+    border: 2px solid #3f51b5;
+  }
+  
+  /* Add active effect */
+  .mat-radio-button.mat-radio-checked {
+    color: #3f51b5; /* Change color when checked */
+  }
+  

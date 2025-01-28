@@ -1,0 +1,11 @@
+<p>home works!</p>
+
+<div class="col-md-6">
+  <label class="d-block mb-3">Employment Status <span class="text-danger">*</span></label>
+  <mat-radio-group class="example-margin" aria-label="Select an option" (change)="change($event)">
+    <mat-radio-button *ngFor="let data of data" [value]="data.customer_type_id">
+      {{ data.customer_type_name }}
+    </mat-radio-button>
+  </mat-radio-group>
+</div>
+

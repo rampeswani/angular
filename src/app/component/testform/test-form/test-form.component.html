@@ -1,0 +1,34 @@
+<div class="form-container">
+  <h2 class="form-title">Form Title</h2>
+
+  <form [formGroup]="form" (ngSubmit)="onSubmit()" >
+    <!-- Description Field -->
+    <div class="form-group">
+      <label for="description">Description</label>
+      <textarea   required formControlName="test_data_description"></textarea>
+    </div>
+
+    <!-- Remark Field -->
+    <div class="form-group">
+      <label for="remark">Remark</label>
+      <input type="text" id="remark" name="remark"   formControlName="test_data_remark" required />
+    </div>
+
+    <!-- Email Field -->
+    <div class="form-group">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email"   formControlName="test_data_email" required />
+    </div>
+
+    <!-- Test Data Name Field -->
+    <div class="form-group">
+      <label for="test_data_name">Test Data Name</label>
+      <input type="text" id="test_data_name" name="test_data_name"  formControlName="test_data_name" required />
+    </div>
+
+    <!-- Submit Button -->
+    <div class="form-group">
+      <button type="submit" class="submit-btn">Submit</button>
+    </div>
+  </form>
+</div>

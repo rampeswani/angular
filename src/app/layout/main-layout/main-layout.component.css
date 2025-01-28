@@ -1,0 +1,32 @@
+/* Layout Container */
+.app-container {
+    display: flex;
+    flex-direction: row; /* Horizontal layout */
+    height: 100vh; /* Full viewport height */
+    overflow: hidden; /* Prevent overflow */
+  }
+  
+  /* Vertical Navbar */
+  app-navbar {
+    flex: 0 0 250px; /* Fixed width for navbar */
+  }
+  
+  /* Main Content Area */
+  .main-content {
+    flex: 1; /* Take up the remaining space */
+    padding: 20px;
+    background-color: #f9f9f9; /* Light gray background for contrast */
+    overflow-y: auto; /* Enable scrolling if content overflows */
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 768px) {
+    app-navbar {
+      flex: 0 0 200px; /* Reduce navbar width on smaller screens */
+    }
+  
+    .main-content {
+      padding: 10px;
+    }
+  }
+  

@@ -1,0 +1,39 @@
+<div class="login-container">
+  <p class="login-heading">Login Screen</p>
+
+  <form [formGroup]="form" class="login-form">
+    <!-- User Name Field -->
+    <div class="form-field">
+      <label for="username">User Name</label>
+      <input type="text" id="username" placeholder="Enter your username" formControlName="user_name" required />
+    </div>
+
+    <!-- Password Field -->
+    <div class="form-field">
+      <label for="password">Password</label>
+      <input type="password" id="password" placeholder="Enter your password" formControlName="password" required />
+    </div>
+
+    <!-- reCAPTCHA Field -->
+    <div class="form-field">
+      
+      <!-- <re-captcha
+        [siteKey]="'6LfaE6wqAAAAABITHHGdw4CKD0G3I8eJ5oW_Bb4R'"
+        (resolved)="onCaptchaResolved($event)">
+      </re-captcha> -->
+    </div>
+
+    <!-- Captcha Token (for debugging) -->
+    <div class="form-field">
+      <label>Captcha Token</label>
+      <img [src]="captchaUrl" alt="CAPTCHA" />
+      <input type="text" formControlName="captcha" />
+    </div>
+
+    <!-- Submit Button -->
+    <button type="button" class="submit-button" (click)="save()">Submit</button>
+  </form>
+</div>
+
+<!-- Load reCAPTCHA Script -->
+

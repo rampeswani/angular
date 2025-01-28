@@ -1,0 +1,94 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar&family=Roboto:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Eczar&family=Exo:wght@300&family=Maven+Pro&family=Roboto:wght@500&display=swap');
+
+::ng-deep body {
+    font-family: "Maven Pro", sans-serif;
+}
+
+::ng-deep label {
+    display: inline-block;
+    margin-bottom: 5px;
+    color: #2E2C43;
+    font-weight: 600;
+    font-size: 14px;
+    font-family: "Maven Pro", sans-serif;
+}
+
+.mat-mdc-radio-button ~ .mat-mdc-radio-button {
+    margin-right: 16px;
+  }
+
+  .mat-radio-button{
+    margin-right: 15px;
+  }
+
+  .mat-form-field{
+    width: 100%;
+  }
+
+  ::ng-deep .mat-form-field-flex > .mat-form-field-infix { 
+    padding: 12px 1px !important;
+    margin-top: -10px;
+    
+  }
+
+.table th {
+    vertical-align: middle;
+    border-bottom: 2px solid #dee2e6;
+    background: #4e6bab;
+    color: #FFF;
+    padding: 5px 5px;
+    font-size: 14px;
+}
+
+.table td {
+  padding: 5px;
+  vertical-align: top !important;
+  font-weight: normal;
+  font-size: 13px;
+}
+
+.DateShow{
+  border-radius: 8px;
+  display: inline-block;
+  margin-left: 10px;
+  padding: 4px;
+  border: 1px dashed #dfdfdf;
+  margin-top: 5px;
+  font-weight: 600;
+  position: relative;
+}
+
+.DateShow .mat-icon{
+    height: 20px;
+    width: 20px;
+    right: -13px;
+    position: absolute;
+    top: -9px;
+    font-size: 18px;
+}
+
+::ng-deep .mat-form-field-appearance-outline .mat-form-field-suffix {
+  top: 6px !important;
+}
+
+::ng-deep button:focus{
+  outline: none !important;
+}
+
+
+::ng-deep .mat-icon-button{
+  height: auto !important;
+}
+
+::ng-deep .mat-calendar-controls .mat-icon-button{
+  height: 40px !important;
+}
+
+.example-radio-group {
+  display: flex; flex-direction: row;
+  /* display: inline-grid; */ 
+  /* display: grid; */
+  margin: 15px 0;
+}

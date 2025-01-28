@@ -1,0 +1,107 @@
+/* Global Styles */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f7f7f7;
+    display: flex;
+    justify-content: center; /* Centers horizontally */
+    align-items: center;     /* Centers vertically */
+    height: 100vh;           /* Full viewport height */
+    box-sizing: border-box;
+    width: 100%;
+  }
+  
+  /* Container that holds the form */
+  .login-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%; 
+  }
+  
+  /* Heading Style */
+  .login-heading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 20px;
+  }
+  
+  /* Form Styles */
+  .login-form {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 400px;  /* Maximum width of the form */
+    box-sizing: border-box;
+  }
+  
+  /* Form Field Styles */
+  .form-field {
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-size: 14px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+  }
+  
+  input {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    box-sizing: border-box; /* Include padding and border within the width */
+  }
+  
+  input:focus {
+    border-color: #007BFF;
+    outline: none;
+  }
+  
+  /* Button Styles */
+  .submit-button {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+    background-color: #007BFF;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-button:hover {
+    background-color: #0056b3;
+  }
+  
+  .submit-button:active {
+    background-color: #004085;
+  }
+  
+  /* Responsive Styles */
+  @media (max-width: 600px) {
+    .login-form {
+      padding: 20px;
+    }
+  
+    .submit-button {
+      padding: 10px;
+    }
+  }
+  
+  /* Example of making sure the captcha is properly displayed */
+ngx-captcha {
+  display: block;
+  margin: 10px 0;
+}

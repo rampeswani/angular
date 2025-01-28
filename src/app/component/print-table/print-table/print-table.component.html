@@ -1,0 +1,48 @@
+<button class="btn btn-primary btn-sm" (click)="printTable('printTableDiv')">
+    <i class="mdi mdi-printer"></i> Print Now
+  </button>
+  
+  <button class="btn btn-info btn-sm ml-2" (click)="exportToExcel('printTableDiv', tableTitle)">
+    <i class="mdi mdi-download"></i> Export as Excel
+  </button>
+  
+  <i class="mdi mdi-close-circle" mat-dialog-close style="float: right; font-size: 25px;"></i>
+  
+  <mat-dialog-content class="mat-typography">
+    <div class="" style="padding: 5px;">
+      <div id="printTableDiv">
+        <!-- <div *ngIf="tableTitle" id="header"><b>{{tableTitle}}</b></div> -->
+        <table id="jsonTable" style="padding-top: 15px;">
+          <thead>
+            <tr *ngIf="tableTitle">
+              <th [colSpan]="columnLabelNames.length"><span [innerHTML]="tableTitle"></span></th>
+            </tr>
+            <tr>
+              <th *ngFor="let header of columnLabelNames">{{ header?.label }}</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let item of filteredJsonArray">
+              <td *ngFor="let header of columnLabelNames">{{ item[header?.key] }}</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <td *ngFor="let header of columnLabelNames" style="padding:0px 0px 0px 0px; margin: 0px;">
+                <div style="font-weight: bold; padding: 0px; margin: 0px 0px 0px 7px;">
+                  {{ header.totalRequired ? formatToTwoDecimal(calculateTotal(header)) : header.key === 'Index' && isTotalAvail ? 'Total' : '' }}
+                </div>
+              </td>
+            </tr>
+          </tfoot>
+        </table>
+      </div>
+    </div>
+  </mat-dialog-content>
+  
+  <mat-dialog-actions class="custom-actions">
+    <div class="right-buttons">
+      <button class="btn btn-dark btn-sm" mat-dialog-close color="">Close</button>
+    </div>
+  </mat-dialog-actions>
+  

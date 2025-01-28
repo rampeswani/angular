@@ -1,0 +1,87 @@
+<div class="row">
+    <div class="col-md-12">
+      <div class="table-responsive">
+ 
+        <input  (keyup)="applyFilter($event)" placeholder="Search">
+        <div>
+            <label for="page-size">Page Size:</label>
+            <select id="page-size" [(ngModel)]="pageSize" (change)="updatePageSize()">
+                
+              <option *ngFor="let size of pageSizeOptions" [value]="size">{{ size }}</option>
+            </select>
+          </div>
+          <table mat-table [dataSource]="meeting_request_data" class=" table table-bordered">
+    
+            <!-- SN Column -->
+            <ng-container matColumnDef="sn">
+              <th mat-header-cell *matHeaderCellDef> S.No. </th>
+              <td mat-cell *matCellDef="let data; let i = index"> {{ i + 1 }} </td>
+            </ng-container>
+
+             <!-- Meeting Title Column -->
+             <!-- <ng-container matColumnDef="customer_name">
+              <th mat-header-cell *matHeaderCellDef> Customer Name </th>
+              <td mat-cell *matCellDef="let data">
+                <ng-container *ngIf="data.customer_name.length <= 100">
+                  {{ data.MeetingTitle }}
+                </ng-container>
+                <ng-container *ngIf="data.MeetingTitle.length > 100">
+                  <ng-container *ngIf="data.showFullTextTitle">
+                    {{ data.MeetingTitle }}
+                    <a href="javascript:void(0);" (click)="toggleText_(data, 'title')">See less</a>
+                  </ng-container>
+                  <ng-container *ngIf="!data.showFullTextTitle">
+                    {{ data.MeetingTitle | slice: 0: 100 }}...
+                    <a href="javascript:void(0);" (click)="toggleText_(data, 'title')">See more</a>
+                  </ng-container>
+                </ng-container>
+              </td>
+            </ng-container> -->
+             
+            <!-- Sender Name Column -->
+            <ng-container matColumnDef="customer_name">
+              <th mat-header-cell *matHeaderCellDef> Customer Name </th>
+              <td mat-cell *matCellDef="let data"> {{ data.customer_name }} </td>
+            </ng-container>
+    
+    
+            <!-- Request For Column -->
+            <ng-container matColumnDef="fathers_name">
+              <th mat-header-cell *matHeaderCellDef> Fathers Name </th>
+              <td mat-cell *matCellDef="let data"> {{ data.customer_fathers_name }} </td>
+            </ng-container>
+            <!-- Date Type Column -->
+            
+    
+            <!-- Date That Requested Column -->
+            <ng-container matColumnDef="number">
+              <th mat-header-cell *matHeaderCellDef> Number </th>
+              <td mat-cell *matCellDef="let data"> {{ data.customer_contact_number }} </td>
+            </ng-container>
+
+
+            <ng-container matColumnDef="amount">
+                <th mat-header-cell *matHeaderCellDef> Amount </th>
+                <td mat-cell *matCellDef="let data"> {{ data.credit_amount }} </td>
+              </ng-container>
+            
+
+            
+            
+            
+            
+                <!-- Display status if it's not 'Pending' -->
+               
+    
+            <!-- Header and Row Definitions -->
+            <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+            <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+          </table>
+          <mat-paginator [pageSize]="2"  [pageSizeOptions]="pageSizeOptions"  showFirstLastButtons></mat-paginator>
+
+   
+        
+
+      </div>
+    </div>
+  </div>
