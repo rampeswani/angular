@@ -8,6 +8,12 @@ import { HomeComponent } from './component/Dashboard/home/home.component';
 import { CustomerForm1Component } from './component/customer-form1/customer-form1.component';
 import { CustomerDataComponent } from './component/customer-data/customer-data.component';
 const routes: Routes = [
+
+  { path: '',
+    redirectTo: '/login',  // Redirect to 'login' when the path is empty
+    pathMatch: 'full'      // Ensure that it matches the full path
+  },
+  
   { path:'',
     component : MainLayoutComponent,
     children:
