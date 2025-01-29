@@ -68,6 +68,7 @@ export class CustomerForm1Component implements OnInit {
     this.customer_model.credit_amount = this.form.controls['credit_amount'].value ;
     this.customer_model.customerType = 1;
     this.customer_model.customer_contact_number = this.form.controls['contact_number'].value;
+    this.customer_model.description = this.form.controls['description'].value;
   }
 
   OnSubmit(): void {

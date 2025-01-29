@@ -9,8 +9,8 @@ import { Router } from '@angular/router';
 export class MasterserviceService {
 
   constructor( private http: HttpClient, private router : Router) { }
-  // apiurl="http://127.0.0.1:8000/api/" ; 
-  apiurl="https://inventory-python.vercel.app/api/" ; 
+  apiurl="http://127.0.0.1:8000/api/" ; 
+  // apiurl="https://inventory-python.vercel.app/api/" ; 
   // login_api(user_name: string, password: string): Observable<any> {
   //   // Using HttpParams to build query parameters
   //   const params = new HttpParams()
