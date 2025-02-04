@@ -7,8 +7,7 @@
   "build": "ng build --configuration production",
   "watch": "ng build --watch --configuration development",
   "test": "ng test",
-  "postinstall": "npm install --legacy-peer-deps"
-
+  "postinstall": "npm install -g @angular/cli"
 },
   "private": true,
   "dependencies": {
