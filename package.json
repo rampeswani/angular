@@ -5,7 +5,7 @@
   "scripts": {
   "ng": "ng",
   "start": "ng serve",
-  "build":  "npm install --legacy-peer-deps && ng build --prod",
+  "build": "ng build --configuration production",
   "watch": "ng build --watch --configuration development",
   "test": "ng test",
   "postinstall": "npm install -g @angular/cli"
