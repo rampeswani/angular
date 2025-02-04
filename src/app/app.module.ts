@@ -33,8 +33,8 @@ import { MatCheckboxModule } from '@angular/material/checkbox';
 
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { DynamicTableComponent } from './component/dynamic-table/dynamic-table/dynamic-table.component';
-import { PrintTableComponent } from './component/print-table/print-table/print-table.component';
+
+
 import { MatMenuModule } from '@angular/material/menu';
 import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
@@ -52,8 +52,8 @@ import { HorizontalNavbarComponent } from './horizontal-navbar/horizontal-navbar
     NavbarComponent,
     HomeComponent,
     CustomerForm1Component,
-    DynamicTableComponent,
-    PrintTableComponent,
+    
+    
     CustomerDataComponent,
     HorizontalNavbarComponent,
     
