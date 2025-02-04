@@ -8,7 +8,7 @@
   "build": "ng build --configuration production",
   "watch": "ng build --watch --configuration development",
   "test": "ng test",
-  "postinstall": "npm install -g @angular/cli"
+   "postinstall": "npx npm-force-resolutions && npm install"
 },
   "private": true,
   "dependencies": {
