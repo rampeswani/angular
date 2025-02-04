@@ -1,32 +1,65 @@
-/* Layout Container */
+/* Ensure app-container uses full height */
 .app-container {
-    display: flex;
-    flex-direction: row; /* Horizontal layout */
-    height: 100vh; /* Full viewport height */
-    overflow: hidden; /* Prevent overflow */
-  }
-  
-  /* Vertical Navbar */
-  app-navbar {
-    flex: 0 0 250px; /* Fixed width for navbar */
-  }
-  
-  /* Main Content Area */
-  .main-content {
-    flex: 1; /* Take up the remaining space */
-    padding: 20px;
-    background-color: #f9f9f9; /* Light gray background for contrast */
-    overflow-y: auto; /* Enable scrolling if content overflows */
-  }
-  
-  /* Responsive Design */
-  @media (max-width: 768px) {
-    app-navbar {
-      flex: 0 0 200px; /* Reduce navbar width on smaller screens */
-    }
-  
-    .main-content {
-      padding: 10px;
-    }
-  }
-  
+  display: flex;
+  flex-direction: column;
+  height: 100vh; /* Full viewport height */
+  overflow: hidden; /* Prevent horizontal scroll */
+}
+
+/* Horizontal Navbar */
+app-horizontal-navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 60px; /* Adjust if needed */
+  background-color: #333;
+  color: white;
+  display: flex;
+  align-items: center;
+  padding: 10px 20px;
+  z-index: 1000;
+}
+
+/* Wrapper for Sidebar + Content */
+.content-wrapper {
+  display: flex;
+  flex: 1;
+  margin-top: 60px; /* Push content below the horizontal navbar */
+  overflow: hidden; /* Prevent overflow issues */
+}
+
+/* Vertical Navbar */
+app-navbar {
+  position: fixed;
+  top: 60px; /* Below horizontal navbar */
+  left: 0;
+  width: 250px;
+  height: calc(100vh - 60px);
+  background-color: #333;
+  color: white;
+  padding-top: 20px;
+  overflow-y: auto; /* Allow sidebar scrolling */
+}
+
+/* Main Content (Ensure Full Height & Scrolling) */
+.main-content {
+  flex: 1;
+  padding: 20px;
+  background-color: #f9f9f9;
+  overflow-y: auto; /* Allow scrolling */
+  height: calc(100vh - 60px); /* Fill remaining height */
+  margin-left: 250px; /* Prevent overlap from sidebar */
+}
+
+/* Customer Form Page Specific Fix */
+.customer-form-container {
+  min-height: 100vh; /* Ensure full height */
+  padding-bottom: 50px; /* Add bottom space so back button is visible */
+}
+
+/* Back Button Positioning Fix */
+.back-button {
+  position: relative;
+  z-index: 10; /* Ensure it's not covered */
+}

@@ -29,13 +29,17 @@ export class HomeComponent implements OnInit {
   )
 
   }
-  change(event: any)
+  change(event: number)
   {
-    console.log("event value of radio button",event.value);
-    if(event.value === 1)
+    console.log("event value of radio button",event);
+    if(event === 1)
     {
       this.router.navigateByUrl('customer-1');
     }
+  }
+  goBack()
+  {
+    
   }
 
 }

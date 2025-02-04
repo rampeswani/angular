@@ -1,34 +1,21 @@
+/* Entire Navbar Container */
 .vertical-navbar {
-  position: fixed;
-  top: 60px; /* Start below the horizontal navbar */
-  left: 0;
-  height: calc(100vh - 80px); /* Full viewport height minus the navbar height */
-  width: 250px; /* Navbar width */
-  background-color: #333; /* Dark navy background */
-  color: white;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  overflow-y: auto; /* Enable vertical scrolling */
-  padding: 20px 10px;
-  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
-  z-index: 1000;
-}
-
-/* Fix the Logo Section */
-.navbar-logo {
-  position: sticky;
-  top: 0;
-  background-color: #333; /* Match navbar color */
-  padding: 10px 0;
-  text-align: center;
-  z-index: 1001;
-}
-
-.navbar-logo img {
-  width: 80px;
-  margin-bottom: 10px;
-}  
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh; /* Full viewport height */
+    width: 250px; /* Navbar width */
+    background-color: #2c3e50; /* Dark navy background */
+    color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    overflow-y: auto; /* Enable vertical scrolling */
+    padding: 20px 10px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+  }
+  
   /* Add a scrollbar for large content */
   .vertical-navbar::-webkit-scrollbar {
     width: 8px;
@@ -43,7 +30,7 @@
     background: #3c6382; /* Hover color */
   }
   
-  /* Logo/Brand Section
+  /* Logo/Brand Section */
   .navbar-logo {
     text-align: center;
     margin-bottom: 20px;
@@ -52,7 +39,7 @@
   .navbar-logo img {
     width: 80px;
     margin-bottom: 10px;
-  } */
+  }
   
   .app-name {
     font-size: 1.5rem;
@@ -60,11 +47,11 @@
   }
   
   /* Navigation Links */
-  /* .navbar-links {
+  .navbar-links {
     display: flex;
     flex-direction: column;
     gap: 15px;
-  } */
+  }
   
   .navbar-links a {
     text-decoration: none;
@@ -83,12 +70,12 @@
     background-color: #34495e; /* Lighter navy background */
     color: #f1c40f; /* Golden yellow on hover/active */
   }
-  /*
-  Logout Button 
+  
+  /* Logout Button */
   .navbar-actions .logout-button {
     width: 100%;
     padding: 10px;
-    background-color: #e74c3c; /* Red button 
+    background-color: #e74c3c; /* Red button */
     color: white;
     border: none;
     border-radius: 5px;
@@ -100,12 +87,11 @@
     align-items: center;
     gap: 10px;
   }
-  */
-/*   
+  
   .navbar-actions .logout-button:hover {
-    background-color: #c0392b; /* Darker red 
+    background-color: #c0392b; /* Darker red */
   }
-   */
+  
   /* Responsive Design */
   @media (max-width: 768px) {
     .vertical-navbar {
@@ -127,7 +113,7 @@
     position: fixed;
     top: 0;
     left: 0;
-    width: 100%;
+    width: 90%;
     z-index: 1000;
     height: 60px; /* Ensure a fixed height */
   }
@@ -146,34 +132,4 @@
     padding: 5px 10px;
     cursor: pointer;
   }
-  .navbar-links {
-    flex-grow: 1; /* Takes up remaining space */
-    display: flex;
-    flex-direction: column;
-    gap: 15px;
-}
-
-/* Fix Logout Button to the Bottom */
-.navbar-actions {
-    margin-top: auto; /* Pushes it to the bottom */
-    padding: 10px 0;
-}
-
-.navbar-actions .logout-button {
-    width: 100%;
-    padding: 10px;
-    background-color: #e74c3c;
-    color: white;
-    border: none;
-    border-radius: 5px;
-    font-size: 1rem;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 10px;
-}
-
-.navbar-actions .logout-button:hover {
-    background-color: #c0392b;
-}
+  

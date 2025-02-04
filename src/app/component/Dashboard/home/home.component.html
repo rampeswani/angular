@@ -1,11 +1,37 @@
-<p>home works!</p>
 
-<div class="col-md-6">
-  <label class="d-block mb-3">Employment Status <span class="text-danger">*</span></label>
-  <mat-radio-group class="example-margin" aria-label="Select an option" (change)="change($event)">
-    <mat-radio-button *ngFor="let data of data" [value]="data.customer_type_id">
-      {{ data.customer_type_name }}
-    </mat-radio-button>
-  </mat-radio-group>
+
+<div class="container mt-4">
+
+  <div class="d-flex justify-content-between align-items-center border-bottom pb-2">
+    
+    <!-- Title on the Top-Left -->
+    <h4 class="fw-bold text-primary">Customer Types</h4>
+
+    <!-- Back Button on the Top-Right -->
+    <button class="btn btn-outline-dark back-button" (click)="goBack()">
+      <i class="fas fa-arrow-left"></i> Back
+    </button>
+    
+    
+  </div>
+  <div class="row">
+    
+    <div class="col-md-4 mb-3" *ngFor="let item of data">
+      <div class="card shadow-sm p-3 text-center">
+        
+        <!-- Customer Type Name -->
+        <h5 class="fw-bold text-dark">{{ item.customer_type_name }}</h5>
+        
+        <!-- Hidden ID (if needed for selection) -->
+        
+
+        <!-- Select Button -->
+        <button class="btn btn-primary w-100" (click)="change(item.customer_type_id)">>
+          Select
+        </button>
+        
+      </div>
+    </div>
+
+  </div>
 </div>
-

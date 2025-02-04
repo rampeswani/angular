@@ -1,11 +1,14 @@
-<p>main-layout works!</p>
 <div class="app-container">
+  <!-- Horizontal Navbar -->
+  <app-navbar></app-navbar>
+
+  <div  class="content-wrapper">
     <!-- Vertical Navbar -->
-    <app-navbar></app-navbar>
-  
-    <!-- Main Content Area -->
+    <app-horizontal-navbar></app-horizontal-navbar>
+
+    <!-- Main Content -->
     <div class="main-content">
       <router-outlet></router-outlet>
     </div>
   </div>
-  
+</div>

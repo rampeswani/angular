@@ -10,3 +10,65 @@ mat-form-field {
     padding: 20px;
   }
   
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  .no-data-message {
+    text-align: center;
+    font-weight: bold;
+    color: #ff5252;
+  }
+  
+  .form-container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  
+  label {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+  
+  input, textarea {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  textarea {
+    resize: vertical;
+  }
+  
+  .button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+  }
+  
+  .no-data-message {
+    text-align: center;
+    font-weight: bold;
+    color: #ff5252;
+  }
+  
+  
+  .back-button {
+    position: absolute;
+    right: 20px;
+    top: 20px;
+  }

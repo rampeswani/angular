@@ -40,6 +40,7 @@ import { MatTableModule } from '@angular/material/table';
 import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { CustomerDataComponent } from './component/customer-data/customer-data.component';
+import { HorizontalNavbarComponent } from './horizontal-navbar/horizontal-navbar.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -54,6 +55,7 @@ import { CustomerDataComponent } from './component/customer-data/customer-data.c
     DynamicTableComponent,
     PrintTableComponent,
     CustomerDataComponent,
+    HorizontalNavbarComponent,
     
   ],
   imports: [

@@ -140,4 +140,9 @@ export class CustomerForm1Component implements OnInit {
             // this.viewApplicationOpenDialog(event.rowData.BeneficaryProfileId);
         }
       }
+
+      goBack()
+      {
+        this.router.navigateByUrl('home');
+      }
 }
