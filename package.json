@@ -1,14 +1,15 @@
+
 {
   "name": "test-inventory",
   "version": "0.0.0",
   "scripts": {
-    "ng": "ng",
-    "start": "ng serve",
-    "build": "ng build --configuration production",
-    "watch": "ng build --watch --configuration development",
-    "test": "ng test",
-      "postinstall": "npm uninstall mat-table-exporter cdk-table-exporter && npm install mat-table-exporter@14.0.0 cdk-table-exporter@14.0.0 tslib@2.3.0"
-  },
+  "ng": "ng",
+  "start": "ng serve",
+  "build": "ng build --configuration production",
+  "watch": "ng build --watch --configuration development",
+  "test": "ng test",
+  "postinstall": "npm install -g @angular/cli"
+},
   "private": true,
   "dependencies": {
     "@angular/animations": "^14.0.0",
@@ -24,8 +25,8 @@
     "exceljs": "^4.4.0",
     "file-saver": "^2.0.5",
     "jspdf": "^2.5.2",
-    "mat-table-exporter": "^10.0.0",
-    "ng-recaptcha": "^10.0.0",
+    "mat-table-exporter": "^9.0.0",
+    "ng-recaptcha": "^9.0.0",
     "ngx-captcha": "^12.0.1",
     "pdfmake": "^0.2.18",
     "rxjs": "~7.5.0",
@@ -34,6 +35,9 @@
     "xlsx": "^0.18.5",
     "zone.js": "~0.11.4"
   },
+  
+
+
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.0.1",
     "@angular/cli": "~14.0.1",
