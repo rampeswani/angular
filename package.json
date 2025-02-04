@@ -1,10 +1,11 @@
+
 {
   "name": "test-inventory",
   "version": "0.0.0",
   "scripts": {
   "ng": "ng",
   "start": "ng serve",
-  "build": "ng build --configuration production",
+  "build":  "npm install --legacy-peer-deps && ng build --prod",
   "watch": "ng build --watch --configuration development",
   "test": "ng test",
   "postinstall": "npm install -g @angular/cli"
@@ -34,6 +35,9 @@
     "xlsx": "^0.18.5",
     "zone.js": "~0.11.4"
   },
+  
+
+
   "devDependencies": {
     "@angular-devkit/build-angular": "^14.0.1",
     "@angular/cli": "~14.0.1",
