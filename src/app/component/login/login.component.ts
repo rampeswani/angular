@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
       localStorage.clear();
     this.bindForm();
       this.loadCaptcha();
-      this.loader.stop()
+      
 
   }
 
@@ -113,6 +113,7 @@ export class LoginComponent implements OnInit {
         const blobUrl = URL.createObjectURL(response);
         this.captchaUrl = URL.createObjectURL(response);
         this.captchaUrl = this.dom.bypassSecurityTrustUrl(blobUrl);
+        this.loader.stop();
       },
       (error) => {
         console.error('Error loading CAPTCHA:', error);
