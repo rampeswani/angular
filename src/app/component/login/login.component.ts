@@ -9,6 +9,7 @@ import { MasterserviceService } from 'src/app/masterservice.service';
 // import { ReCaptchaV3Service } from 'ngx-captcha';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
+import { NgxUiLoaderService } from "ngx-ui-loader";
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
@@ -17,6 +18,7 @@ import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 export class LoginComponent implements OnInit {
 
   constructor(public service: MasterserviceService, public fb: FormBuilder,
+    public loader : NgxUiLoaderService,
     public router : Router,
     // private re_captcha : ReCaptchaV3Service,
     public http: HttpClient,
@@ -29,12 +31,15 @@ export class LoginComponent implements OnInit {
   form! : FormGroup ;
   
   ngOnInit(): void {
+    debugger
+    this.loader.start();
     
     console.log("inside from the login component");
     
       localStorage.clear();
     this.bindForm();
       this.loadCaptcha();
+      this.loader.stop()
 
   }
 

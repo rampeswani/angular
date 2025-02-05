@@ -41,6 +41,7 @@ import { MatTooltipModule } from '@angular/material/tooltip';
 import { MatPaginatorModule } from '@angular/material/paginator';
 import { CustomerDataComponent } from './component/customer-data/customer-data.component';
 import { HorizontalNavbarComponent } from './horizontal-navbar/horizontal-navbar.component';
+import { NgxUiLoaderModule } from 'ngx-ui-loader';
 @NgModule({
   declarations: [
     AppComponent,
@@ -67,7 +68,7 @@ import { HorizontalNavbarComponent } from './horizontal-navbar/horizontal-navbar
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    
+     NgxUiLoaderModule ,
     
     MatRadioModule,
     MatCheckboxModule,
