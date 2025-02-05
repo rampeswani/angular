@@ -16,7 +16,7 @@ import { LoginLayoutComponent } from './layout/login-layout/login-layout.compone
 import { MainLayoutComponent } from './layout/main-layout/main-layout.component';
 import { NavbarComponent } from './NAVBAR/navbar/navbar.component';
 import { HomeComponent } from './component/Dashboard/home/home.component';
-import { NgxCaptchaModule } from 'ngx-captcha';
+
 
 import { CustomerForm1Component } from './component/customer-form1/customer-form1.component';
 import { MatRadioModule } from '@angular/material/radio';
@@ -67,7 +67,7 @@ import { HorizontalNavbarComponent } from './horizontal-navbar/horizontal-navbar
     AppRoutingModule,
     ReactiveFormsModule,
     HttpClientModule,
-    NgxCaptchaModule,
+    
     
     MatRadioModule,
     MatCheckboxModule,

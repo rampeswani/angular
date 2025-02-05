@@ -6,7 +6,7 @@ import { FormControl } from '@angular/forms';
 import { FormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { MasterserviceService } from 'src/app/masterservice.service';
-import { ReCaptchaV3Service } from 'ngx-captcha';
+// import { ReCaptchaV3Service } from 'ngx-captcha';
 import { HttpClient } from '@angular/common/http';
 import { DomSanitizer, SafeUrl } from '@angular/platform-browser';
 @Component({
@@ -18,7 +18,7 @@ export class LoginComponent implements OnInit {
 
   constructor(public service: MasterserviceService, public fb: FormBuilder,
     public router : Router,
-    private re_captcha : ReCaptchaV3Service,
+    // private re_captcha : ReCaptchaV3Service,
     public http: HttpClient,
     public dom : DomSanitizer
     // private captchaService:NgxCaptchaService
