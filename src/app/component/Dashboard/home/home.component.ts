@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { MasterserviceService } from 'src/app/masterservice.service';
 import { Router } from '@angular/router';
+import { NgxUiLoaderService } from "ngx-ui-loader";
 @Component({
   selector: 'app-home',
   templateUrl: './home.component.html',
@@ -9,10 +10,12 @@ import { Router } from '@angular/router';
 export class HomeComponent implements OnInit {
 
   constructor(public service : MasterserviceService,
-    public router : Router
+    public router : Router,
+    public loader : NgxUiLoaderService
   ) { }
 
   ngOnInit(): void {
+    this.loader.start()
     this.get_customer_type();
   }
   data: any ;
@@ -21,7 +24,7 @@ export class HomeComponent implements OnInit {
     this.service.customer_type_get().subscribe((result)=>{
       console.log("data of customer type from api ",result);
       this.data = result;
-
+      this.loader.stop();
     },
     (err)=>{
       console.log("there is error",err);

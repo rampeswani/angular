@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-
+import { NgxUiLoaderService } from "ngx-ui-loader";
 @Component({
   selector: 'app-login-layout',
   templateUrl: './login-layout.component.html',
