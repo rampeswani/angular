@@ -21,7 +21,7 @@ export class CustomerDataComponent implements OnInit {
   pageSizeOptions: number[] = [5, 10, 20]; 
 
   meeting_request_data: MatTableDataSource<Customer> = new MatTableDataSource<Customer>([]);
-  displayedColumns: string[] = ['sn', 'customer_name', 'fathers_name' ,'number',   'amount','detail'];
+  displayedColumns: string[] = ['sn', 'customer_name', 'fathers_name' ,'number',   'amount','detail','delete'];
 
   ngOnInit(): void {
     this.loader.start();
@@ -72,6 +72,10 @@ updatePageSize() {
   {
     this.route.navigate(['/customer-detail', id]);
 
+  }
+  delete(id:number)
+  {
+    
   }
 
 }

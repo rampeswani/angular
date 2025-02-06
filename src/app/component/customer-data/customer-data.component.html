@@ -26,16 +26,24 @@
             </ng-container>
 
             <!-- Customer Name Column -->
-            <ng-container matColumnDef="customer_name">
-              <th mat-header-cell *matHeaderCellDef> Customer Name </th>
-              <td mat-cell *matCellDef="let data"> {{ data.customer_name }} - {{data.customer_name_hindi}}</td>
-            </ng-container>
+            <!-- Customer Name Column -->
+<ng-container matColumnDef="customer_name">
+  <th mat-header-cell *matHeaderCellDef> Customer Name </th>
+  <td mat-cell *matCellDef="let data"> 
+    <div>{{ data.customer_name }}</div>
+    <div class="text-muted small">{{ data.customer_name_hindi }}</div>
+  </td>
+</ng-container>
 
-            <!-- Fathers Name Column -->
-            <ng-container matColumnDef="fathers_name">
-              <th mat-header-cell *matHeaderCellDef> Father's Name </th>
-              <td mat-cell *matCellDef="let data"> {{ data.customer_fathers_name }} - {{data.customer_fathers_name_hindi}}</td>
-            </ng-container>
+<!-- Father's Name Column -->
+<ng-container matColumnDef="fathers_name">
+  <th mat-header-cell *matHeaderCellDef> Father's Name </th>
+  <td mat-cell *matCellDef="let data"> 
+    <div>{{ data.customer_fathers_name }}</div>
+    <div class="text-muted small">{{ data.customer_fathers_name_hindi }}</div>
+  </td>
+</ng-container>
+
 
             <!-- Contact Number Column -->
             <ng-container matColumnDef="number">
@@ -54,6 +62,12 @@
               <td mat-cell *matCellDef="let data"> <button class="logout-button" (click)="open_customer_detail(data.customer_id)">detail</button> </td>
             </ng-container>
 
+            <ng-container matColumnDef="delete">
+              <th mat-header-cell *matHeaderCellDef> Delete</th>
+              <td mat-cell *matCellDef="let data"> <button class="logout-button" 
+                (click)="delete(data.customer_id)"
+                >detail</button> </td>
+            </ng-container>
             <!-- Header & Row Definitions -->
             <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
             <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
