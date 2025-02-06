@@ -5,6 +5,7 @@ import { MasterserviceService } from 'src/app/masterservice.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { NgxUiLoaderService } from "ngx-ui-loader";
 import { Router } from '@angular/router';
+import Swal from "sweetalert2";
 @Component({
   selector: 'app-customer-data',
   templateUrl: './customer-data.component.html',
@@ -75,7 +76,22 @@ updatePageSize() {
   }
   delete(id:number)
   {
-    
+    Swal.fire({
+      title: 'Are you sure?',
+      text: 'Do you really want to delete this?',
+      icon: 'question',
+      showCancelButton: true,
+      confirmButtonText: 'Yes',
+      cancelButtonText: 'No'
+    }).then((result) => {
+      if (result.isConfirmed) {
+        // Action to perform when "Yes" is clicked
+        Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+      } else {
+        // Action to perform when "No" is clicked
+        Swal.fire('Cancelled', 'Your file is safe.', 'info');
+      }
+    });
   }
 
 }
