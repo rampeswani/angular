@@ -105,6 +105,11 @@ export class MasterserviceService {
   {
     return this.http.get(this.apiurl + "customer-get-get");
   }
+
+  customer_detail(id: number) : Observable<any>
+  {
+    return this.http.get(this.apiurl + "customer-detail/" +id) ;
+  }
   
 
 }

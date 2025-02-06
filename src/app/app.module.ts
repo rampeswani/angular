@@ -42,6 +42,7 @@ import { MatPaginatorModule } from '@angular/material/paginator';
 import { CustomerDataComponent } from './component/customer-data/customer-data.component';
 import { HorizontalNavbarComponent } from './horizontal-navbar/horizontal-navbar.component';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
+import { CustomerDetailComponent } from './component/customer-detail/customer-detail.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -57,6 +58,7 @@ import { NgxUiLoaderModule } from 'ngx-ui-loader';
     
     CustomerDataComponent,
     HorizontalNavbarComponent,
+    CustomerDetailComponent,
     
   ],
   imports: [

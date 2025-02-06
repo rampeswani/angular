@@ -7,6 +7,7 @@ import { AuthLayoutComponent } from './layout/auth-layout/auth-layout.component'
 import { HomeComponent } from './component/Dashboard/home/home.component';
 import { CustomerForm1Component } from './component/customer-form1/customer-form1.component';
 import { CustomerDataComponent } from './component/customer-data/customer-data.component';
+import { CustomerDetailComponent } from './component/customer-detail/customer-detail.component';
 const routes: Routes = [
 
   { path: '',
@@ -22,7 +23,8 @@ const routes: Routes = [
     
     {   path:'test-form', component : TestFormComponent},
     {path: 'customer-1', component : CustomerForm1Component},
-    {path: 'customer-data', component : CustomerDataComponent}
+    {path: 'customer-data', component : CustomerDataComponent},
+    {path:'customer-detail/:id',component : CustomerDetailComponent}
     ]
 
   },

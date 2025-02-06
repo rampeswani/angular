@@ -4,6 +4,7 @@ import { MatTableDataSource } from '@angular/material/table';
 import { MasterserviceService } from 'src/app/masterservice.service';
 import { MatPaginator } from '@angular/material/paginator';
 import { NgxUiLoaderService } from "ngx-ui-loader";
+import { Router } from '@angular/router';
 @Component({
   selector: 'app-customer-data',
   templateUrl: './customer-data.component.html',
@@ -13,13 +14,14 @@ export class CustomerDataComponent implements OnInit {
   @ViewChild(MatPaginator) paginator!: MatPaginator;
 
   constructor(public service : MasterserviceService,
-    public loader : NgxUiLoaderService
+    public loader : NgxUiLoaderService,
+    public route : Router
   ) { }
   pageSize: number = 2;  // Default page size
   pageSizeOptions: number[] = [5, 10, 20]; 
 
   meeting_request_data: MatTableDataSource<Customer> = new MatTableDataSource<Customer>([]);
-  displayedColumns: string[] = ['sn', 'customer_name', 'fathers_name' ,'number',   'amount',];
+  displayedColumns: string[] = ['sn', 'customer_name', 'fathers_name' ,'number',   'amount','detail'];
 
   ngOnInit(): void {
     this.loader.start();
@@ -64,6 +66,12 @@ updatePageSize() {
     if (this.meeting_request_data.paginator) {
       this.meeting_request_data.paginator.firstPage();
     }
+  }
+
+  open_customer_detail(id:number)
+  {
+    this.route.navigate(['/customer-detail', id]);
+
   }
 
 }

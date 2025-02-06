@@ -1,7 +1,7 @@
-<div class="container mt-4">
+<div class="container-fluid mt-4">
   <div class="row">
-    <div class="col-md-12">
-      <div class="card shadow-sm p-3">
+    <div class="col-12">
+      <div class="card">
 
         <!-- Search Input & Page Size Selector -->
         <div class="d-flex justify-content-between align-items-center mb-3">
@@ -17,7 +17,7 @@
 
         <!-- Data Table -->
         <div class="table-responsive">
-          <table mat-table [dataSource]="meeting_request_data" class="table table-bordered table-hover">
+          <table mat-table [dataSource]="meeting_request_data" class="full-width-table">
             
             <!-- Serial Number Column -->
             <ng-container matColumnDef="sn">
@@ -47,6 +47,11 @@
             <ng-container matColumnDef="amount">
               <th mat-header-cell *matHeaderCellDef> Credit Amount </th>
               <td mat-cell *matCellDef="let data"> {{ data.credit_amount }} </td>
+            </ng-container>
+
+            <ng-container matColumnDef="detail">
+              <th mat-header-cell *matHeaderCellDef> Detail</th>
+              <td mat-cell *matCellDef="let data"> <button class="logout-button" (click)="open_customer_detail(data.customer_id)">detail</button> </td>
             </ng-container>
 
             <!-- Header & Row Definitions -->
