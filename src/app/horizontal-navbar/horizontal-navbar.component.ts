@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { MasterserviceService } from '../masterservice.service';
 
 @Component({
   selector: 'app-horizontal-navbar',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HorizontalNavbarComponent implements OnInit {
 
-  constructor() { }
+  constructor(private service : MasterserviceService) 
+  { }
 
   ngOnInit(): void {
   }
-
+  logout()
+  {
+    this.service.logout();
+    
+  }
 }

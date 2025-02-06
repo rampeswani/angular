@@ -18,7 +18,7 @@ export class CustomerDataComponent implements OnInit {
     public loader : NgxUiLoaderService,
     public route : Router
   ) { }
-  pageSize: number = 2;  // Default page size
+  pageSize: number = 1;  // Default page size
   pageSizeOptions: number[] = [5, 10, 20]; 
 
   meeting_request_data: MatTableDataSource<Customer> = new MatTableDataSource<Customer>([]);
@@ -85,8 +85,25 @@ updatePageSize() {
       cancelButtonText: 'No'
     }).then((result) => {
       if (result.isConfirmed) {
+        
         // Action to perform when "Yes" is clicked
-        Swal.fire('Deleted!', 'Your file has been deleted.', 'success');
+        this.service.customer_delete(id).subscribe((resultD)=>{
+          console.log("succes of the ddelete api",resultD);
+          
+          Swal.fire({title : 'deleted',text: resultD.message}).then((result_)=>{
+            if(result_.isConfirmed)
+            {
+              this.loader.start()
+              this.get_data();
+              this.loader.stop();
+            }
+          });
+        },
+        (err)=>{
+          console.log("error in the delete api");
+        }
+      )
+        
       } else {
         // Action to perform when "No" is clicked
         Swal.fire('Cancelled', 'Your file is safe.', 'info');

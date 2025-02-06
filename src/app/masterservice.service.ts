@@ -110,6 +110,10 @@ export class MasterserviceService {
   {
     return this.http.get(this.apiurl + "customer-detail/" +id) ;
   }
+  customer_delete(id:number): Observable<any>
+  {
+    return this.http.get(this.apiurl + "customer-delete/" +id);
+  }
   
 
 }
