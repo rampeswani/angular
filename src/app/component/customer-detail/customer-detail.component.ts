@@ -24,10 +24,12 @@ export class CustomerDetailComponent implements OnInit {
     this.loader.stop();
     
   }
+  customer: any = {};
   get_detail()
   {
     this.service.customer_detail(this.id).subscribe((result)=>{
-      console.log("succes in getting data",result);
+      console.log("data is ",result);
+      this.customer = result
     },
     (err)=>{
       console.log("error in getting the data",err);

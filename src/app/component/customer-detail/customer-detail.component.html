@@ -1,1 +1,33 @@
-<p>customer-detail works!</p>
+<div class="container">
+    <mat-card class="customer-card">
+      <mat-card-header class="card-header">
+        <mat-card-title>Data of {{ customer?.customer_name }}</mat-card-title>
+      </mat-card-header>
+      <mat-divider></mat-divider>
+      <mat-card-content>
+        <div class="details">
+          <div class="detail-item">
+            <mat-icon class="icon">account_balance_wallet</mat-icon>
+            <span class="label">Credit Amount:</span>
+            <span class="value">{{ customer?.credit_amount | currency }}</span>
+          </div>
+          <div class="detail-item">
+            <mat-icon class="icon">location_on</mat-icon>
+            <span class="label">Address:</span>
+            <span class="value">{{ customer?.address }}</span>
+          </div>
+          <div class="detail-item">
+            <mat-icon class="icon">phone</mat-icon>
+            <span class="label">Contact:</span>
+            <span class="value">{{ customer?.customer_contact_number }}</span>
+          </div>
+          <div class="detail-item">
+            <mat-icon class="icon">event</mat-icon>
+            <span class="label">Record Created:</span>
+            <span class="value">{{ customer?.createdDate | date:'medium' }}</span>
+          </div>
+        </div>
+      </mat-card-content>
+    </mat-card>
+  </div>
+  
