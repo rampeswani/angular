@@ -21,15 +21,15 @@ export class TestFormComponent implements OnInit {
   form! : FormGroup ; 
   model : TestData = new TestData() 
   ngOnInit(): void {
-    const token = localStorage.getItem('token');
-    if (!token)
-    {
-      this.router.navigateByUrl('login');
-    }
-    if (token && this.isTokenExpired(token) )
-    {
-      this.router.navigateByUrl('login');
-    }
+    // const token = localStorage.getItem('token');
+    // if (!token)
+    // {
+    //   this.router.navigateByUrl('login');
+    // }
+    // if (token && this.isTokenExpired(token) )
+    // {
+    //   this.router.navigateByUrl('login');
+    // }
     this.bindForm();
     this.loadCaptcha();
   }

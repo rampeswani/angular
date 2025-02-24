@@ -14,7 +14,7 @@
           <div class="detail-item">
             <mat-icon class="icon">location_on</mat-icon>
             <span class="label">Address:</span>
-            <span class="value">{{ customer?.address }}</span>
+            <span class="value">{{ customer?.customer_address }}</span>
           </div>
           <div class="detail-item">
             <mat-icon class="icon">phone</mat-icon>
@@ -22,9 +22,13 @@
             <span class="value">{{ customer?.customer_contact_number }}</span>
           </div>
           <div class="detail-item">
+            <mat-icon>description</mat-icon>
+            <span>Description:</span> {{ customer.description }}
+          </div>
+          <div class="detail-item">
             <mat-icon class="icon">event</mat-icon>
             <span class="label">Record Created:</span>
-            <span class="value">{{ customer?.createdDate | date:'medium' }}</span>
+            <span class="value">{{ customer?.created_date | date:'medium' }}</span>
           </div>
         </div>
       </mat-card-content>

@@ -12,11 +12,12 @@ export class MainLayoutComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    const token = localStorage.getItem('token');  // Check if the user has a token
-    if (!token) {
-      this.router.navigate(['/login']);  // Otherwise, navigate to login
-    } 
-  }
+  //   const token = localStorage.getItem('token');  // Check if the user has a token
+  //   if (!token) {
+  //     this.router.navigate(['/login']);  // Otherwise, navigate to login
+  //   } 
+   }
+
   
 
 

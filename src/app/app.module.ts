@@ -43,6 +43,7 @@ import { CustomerDataComponent } from './component/customer-data/customer-data.c
 import { HorizontalNavbarComponent } from './horizontal-navbar/horizontal-navbar.component';
 import { NgxUiLoaderModule } from 'ngx-ui-loader';
 import { CustomerDetailComponent } from './component/customer-detail/customer-detail.component';
+import { AComponent } from './component/a/a.component';
 @NgModule({
   declarations: [
     AppComponent,
@@ -59,6 +60,7 @@ import { CustomerDetailComponent } from './component/customer-detail/customer-de
     CustomerDataComponent,
     HorizontalNavbarComponent,
     CustomerDetailComponent,
+    AComponent,
     
   ],
   imports: [

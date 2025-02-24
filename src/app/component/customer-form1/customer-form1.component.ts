@@ -20,15 +20,15 @@ export class CustomerForm1Component implements OnInit {
   customer_model : Customer = new Customer() ;
   ngOnInit(): void {
 
-    const token = localStorage.getItem('token');
-    if (!token)
-    {
-      this.router.navigateByUrl('login');
-    }
-    if (token && this.isTokenExpired(token) )
-    {
-      this.router.navigateByUrl('login');
-    }
+    // const token = localStorage.getItem('token');
+    // if (!token)
+    // {
+    //   this.router.navigateByUrl('login');
+    // }
+    // if (token && this.isTokenExpired(token) )
+    // {
+    //   this.router.navigateByUrl('login');
+    // }
 
 
     this.bind_form();
