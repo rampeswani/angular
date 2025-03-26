@@ -60,18 +60,15 @@ mat-card {
   transform: scale(1.05);
 }
 /* Header section - flex for proper alignment */
-/* Header section with reduced width */
 .header-section {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  width: 80%; /* Adjusted width for a balanced look */
-  max-width: 900px; /* Prevents it from being too wide */
+  width: 100%;
   padding: 15px 20px;
-  background-color: #007bff; /* Bootstrap primary blue */
+  background-color: #040a11; /* Bootstrap primary blue */
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-  margin: 0 auto; /* Centers the header on the page */
 }
 
 /* Page title styling */

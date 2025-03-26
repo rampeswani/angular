@@ -6,13 +6,13 @@
         <!-- Search Input & Page Size Selector -->
         <div class="d-flex justify-content-between align-items-center mb-3">
           <input class="form-control w-50" (keyup)="applyFilter($event)" placeholder="Search">
-          
+<!--           
           <div class="d-flex align-items-center">
             <label for="page-size" class="me-2 fw-bold">Page Size:</label>
             <select id="page-size" class="form-select w-auto" [(ngModel)]="pageSize" (change)="updatePageSize()">
               <option *ngFor="let size of pageSizeOptions" [value]="size">{{ size }}</option>
             </select>
-          </div>
+          </div> -->
         </div>
 
         <!-- Data Table -->
