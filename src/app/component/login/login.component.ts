@@ -53,9 +53,11 @@ export class LoginComponent implements OnInit {
   }
   save()
   {
+    debugger
     if(this.form.valid)
     {
-      this.loader.start()
+      this.loader.start();
+      
       console.log("inside the form");
       const username_ = this.form.value.user_name  ;
       const password = this.form.value.password ;
@@ -66,10 +68,12 @@ export class LoginComponent implements OnInit {
       // const token = 
       // localStorage.setItem("username_",username_);
       // localStorage.setItem("password",password);
+      
       this.service.login(this.form.value.user_name,this.form.value.password,this.form.value.captcha).subscribe((result)=>{
         console.log("print the result",result);
         if(result.access)
         {
+          this.loader.start()
           console.log("inside the result.token ");
           localStorage.setItem("token",result.access);
         console.log("token after it get set",localStorage.getItem('access_token'));
@@ -81,7 +85,7 @@ export class LoginComponent implements OnInit {
         this.router.navigate(['/home']);
         }
         else{
-          
+
           this.router.navigate(['/home']);
         }
         
@@ -90,7 +94,9 @@ export class LoginComponent implements OnInit {
       (err)=>{
         console.log("error",err);
       }
+      
     )
+    this.loader.stop()
 
     }
     else{
