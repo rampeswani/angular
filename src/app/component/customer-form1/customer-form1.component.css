@@ -1,74 +1,104 @@
-@import '~@angular/material/prebuilt-themes/indigo-pink.css';
-mat-form-field {
-    width: 100%;
-    margin-bottom: 16px; /* Ensures spacing between form fields */
-  }
-  
-  mat-card {
-    max-width: 600px;
-    margin: 50px auto;
-    padding: 20px;
-  }
-  
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-  }
-  
-  .full-width {
-    width: 100%;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 16px;
-  }
-  
-  .no-data-message {
-    text-align: center;
-    font-weight: bold;
-    color: #ff5252;
-  }
-  
-  .form-container {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  
-  label {
-    font-weight: bold;
-    margin-bottom: 5px;
-  }
-  
-  input, textarea {
-    width: 100%;
-    padding: 8px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-  }
-  
-  textarea {
-    resize: vertical;
-  }
-  
-  .button-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 16px;
-  }
-  
-  .no-data-message {
-    text-align: center;
-    font-weight: bold;
-    color: #ff5252;
-  }
-  
-  
-  .back-button {
-    position: absolute;
-    right: 20px;
-    top: 20px;
-  }
+/* Form container - Full width */
+.customer-form {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+/* Mat card should take full width */
+mat-card {
+  width: 90%;
+  max-width: 1200px;
+  padding: 20px;
+  margin: auto;
+  background-color: #f8f9fa; /* Light background */
+}
+
+/* Grid layout for form fields */
+.form-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+/* Form group for each input */
+.form-group {
+  display: flex;
+  flex-direction: column;
+}
+
+/* Full-width for textarea */
+.form-group.full-width {
+  grid-column: span 2;
+}
+
+/* Input and textarea styling */
+.form-group input,
+.form-group textarea {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Button container */
+.button-container {
+  text-align: center;
+  margin-top: 20px;
+}
+
+/* Submit button */
+.button-container button {
+  width: 200px;
+  font-size: 16px;
+  padding: 10px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Button hover effect */
+.button-container button:hover {
+  transform: scale(1.05);
+}
+/* Header section - flex for proper alignment */
+/* Header section with reduced width */
+.header-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 80%; /* Adjusted width for a balanced look */
+  max-width: 900px; /* Prevents it from being too wide */
+  padding: 15px 20px;
+  background-color: #007bff; /* Bootstrap primary blue */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  margin: 0 auto; /* Centers the header on the page */
+}
+
+/* Page title styling */
+.page-title {
+  margin: 0;
+  font-size: 22px;
+  font-weight: bold;
+  color: white;
+}
+
+/* Back button styling */
+.back-button {
+  background-color: white;
+  color: #007bff;
+  border: none;
+  padding: 8px 15px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: transform 0.2s ease-in-out;
+}
+
+/* Back button hover effect */
+.back-button:hover {
+  transform: scale(1.1);
+  background-color: #e0e0e0;
+}

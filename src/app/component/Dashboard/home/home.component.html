@@ -1,37 +1,23 @@
-
-
-<div class="container mt-4">
-
-  <div class="d-flex justify-content-between align-items-center border-bottom pb-2">
-    
-    <!-- Title on the Top-Left -->
-    <h4 class="fw-bold text-primary">Customer Types</h4>
-
-    <!-- Back Button on the Top-Right -->
-    <button class="logout-button" (click)="goBack()">
-      <i class="fas fa-arrow-left"></i> Back
-    </button>
-    
-    
-  </div>
-  <div class="row">
-    
-    <div class="col-md-4 mb-3" *ngFor="let item of data">
-      <div class="card shadow-sm p-3 text-center" style="background-color: black; color: white;">
-        
-        <!-- Customer Type Name -->
-        <h5 class="fw-bold text-dark">{{ item.customer_type_name }}</h5>
-        
-        <!-- Hidden ID (if needed for selection) -->
-        
-
-        <!-- Select Button -->
-        <button class="logout-button" (click)="change(item.customer_type_id)">>
-          Select
-        </button>
-        
-      </div>
+<div class="container main-container py-4">
+  <!-- Header Section -->
+  
+    <!-- Header Section -->
+    <div class="header-section">
+      <h4 class="page-title">Customer Types </h4>
+      <button class="back-button" (click)="goBack()">
+        <i class="fas fa-arrow-left"></i> Back
+      </button>
     </div>
+  
+  
 
+  <!-- Customer Types Grid -->
+  <div class="d-flex justify-content-center flex-wrap box-container">
+    <div class="customer-box text-center" *ngFor="let item of data">
+      <h5 class="fw-bold text-light">{{ item.customer_type_name }}</h5>
+      <button class="btn btn-outline-light btn-sm mt-2" (click)="change(item.customer_type_id)">
+        Select
+      </button>
+    </div>
   </div>
 </div>

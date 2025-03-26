@@ -55,6 +55,7 @@ export class LoginComponent implements OnInit {
   {
     if(this.form.valid)
     {
+      this.loader.start()
       console.log("inside the form");
       const username_ = this.form.value.user_name  ;
       const password = this.form.value.password ;
@@ -76,10 +77,11 @@ export class LoginComponent implements OnInit {
         // localStorage.setItem("user_id", result.user_id);
         // localStorage.setItem("password",result.password);
         //  localStorage.setItem("expiry_time",result.expiry_time);
-        
+        this.loader.stop()
         this.router.navigate(['/home']);
         }
         else{
+          
           this.router.navigate(['/home']);
         }
         
